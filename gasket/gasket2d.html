@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>20205188 서휘도 - Sierpinski Gasket</title>
+        <title>20205188 서휘도 - 2D Sierpinski Gasket</title>
         <script id="vertex-shader" type="x-shader/x-vertex">
         attribute vec4 vPosition;
 
         void main() {
-            gl_PointSize = 2.0;
+            //gl_PointSize = 2.0;
             gl_Position = vPosition;
         }
         </script>
@@ -15,7 +15,7 @@
         precision mediump float;
 
         void main() {
-            gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);
+            gl_FragColor = vec4(0.9, 0.6, 0.0, 1.0);
         }
         </script>
 
@@ -28,7 +28,7 @@
         <canvas id="gl-canvas" width="512" height="512">
             Oops... your browser doesn't support the HTML5 canvas element!
         </canvas>
-        <p>점의 개수: <input type="text" id="numPoints" value="5000" onchange="drawGasket()"></p>
+        <p>Subdivision Level: 1 <input type="range" id="level" value="5" min="1" max="9" step="1" value="5"> 9</p>
         
     </body>
 </html>
